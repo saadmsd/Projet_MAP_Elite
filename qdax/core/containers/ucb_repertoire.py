@@ -35,7 +35,6 @@ class UCBRepertoire(MapElitesRepertoire):
     survivals: jnp.ndarray = struct.field(pytree_node=True, default=None)
 
     def __init__(self, genotypes: jnp.ndarray, fitnesses: jnp.ndarray, descriptors: jnp.ndarray, centroids: jnp.ndarray):
-        print("UCBBBBBBBBBBBBBB")
         super().__init__(genotypes, fitnesses, descriptors, centroids)
         object.__setattr__(self, 'total_counts', 0)
         object.__setattr__(self, 'rewards', jnp.zeros(fitnesses.shape))
